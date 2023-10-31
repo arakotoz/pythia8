@@ -11,6 +11,7 @@
   <li><a href="#section0">Resonance Decays and Cross Sections</a></li>
   <li><a href="#section1">Special properties and methods for resonances</a></li>
   <li><a href="#section2">Modes for Matrix Element Processing</a></li>
+  <li><a href="#section3"> Filter for Resonance Decays </a></li>
 </ol>
 
  
@@ -151,7 +152,7 @@ it is because you <i>want</i> to study secondary vertices.
 How to interface those decays to a detector simulation program then 
 is another story, to be solved separately. Do note that a special 
 treatment is needed for coloured long-lived resonances, that form 
-<a href="Rhadrons.html" target="page">R-hadrons</a>, and where charge and flavour 
+<a href="RHadrons.html" target="page">R-hadrons</a>, and where charge and flavour 
 may change between the production and decay vertices. 
  
 <a name="section1"></a> 
@@ -393,7 +394,19 @@ but the one in the denominator to all channels of the particle. These
 ever-changing numbers are not directly visible to the user, but are only 
 stored in a work area. 
  
+<a name="section3"></a> 
+<h3> Filter for Resonance Decays </h3> 
+ 
+The <code>UserHooks</code> code <code>ResonanceDecayFilterHooks</code> 
+available in <code>include/Pythia8Plugins</code> provides a convenient 
+way to select a specific final state from resonance decays. For 
+example, this could be applied to provide events from top pair 
+production that include leptons + jets. The example 
+<code>main103</code> demonstrates how to use this user hook. Further 
+documentation on the available settings can by found in the 
+<code>ResonanceDecayFilterHooks.h</code> header file. 
+ 
 </body>
 </html>
  
-<!-- Copyright (C) 2020 Torbjorn Sjostrand --> 
+<!-- Copyright (C) 2023 Torbjorn Sjostrand --> 
